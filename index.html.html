@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+ <title>Para o meu namorado Kauã Pinheiro</title>
+<style>
+ body {
+ background-color: #ffe4e1;
+    font-family:  Arial , sans-serif;
+    text-align:center;
+    padding:30px;
+}
+
+
+    header {
+      background-color: #d63384;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+     h1, h2 {
+        color: #d63384;
+     }
+
+     p {
+        font-size: 18px;
+        color: #333;
+
+     }
+
+     img {
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+
+    video {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+     
+     button {
+        padding : 10px 20px;
+        font-size: 16px;
+        background-color: #ff69b4;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+    
+     }
+
+    .coracao {
+      position: fixed;
+      font-size: 24px;
+      color: red;
+      animation: cair 5s linear infinite;
+      z-index: 0;
+    }
+     
+
+     @keyframes cair {
+      0% {transform: translateY(-100px);}
+      100% {transform: translateY(100vh);}
+    }
+
+    .mensagem-digitando {
+      font-size: 20px;
+      color: #d63384;
+      border-right: 2px solid #d63384;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: digitar 5s steps(40, end) forwards;
+    }
+
+    @keyframes digitar {
+      to { width: 100%; }
+    }
+
+    .cartinha {
+      background-color: #fff0f5;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffa6c9;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+
+
+ <h1>Fiz um site especialmente para nós amor, te amo</h1>
+    <p>Feliz 12 meses amor muito obrigada por tudo que vc fez e continua fazendo por mim. 💘</p>
+
+    
+
+    <H2>Nossas Fotinhas </H2> 
+     <img src= "foto1.jpeg" width="200" > &nbsp;&nbsp;&nbsp;  
+
+     <img src= "foto2.jpeg" width="200" > &nbsp;&nbsp;&nbsp; 💘
+
+      <img src = "foto3.jpeg" width="200" >💘
+
+    
+
+
+         <h2>Nossos vídeos 💞</h2>
+<div class="videos">
+  <video width="320" height= "240" controls>
+    <source src="video.mp4" type="video/mp4" />
+  </video>
+  <video width="320" height= "240" controls>
+    <source src="video2.mp4" type="video/mp4" />
+  </video>
+</div>
+
+     <div>
+    <button onclick="mostrarMensagem()">Clique para ver uma mensagem 💌</button>
+    <p id="mensagem-secreta"></p>
+  </div>
+
+ <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem-secreta").textContent = "Você é o amor da minha vida, neneco 💖";
+      criarCoracao();
+    }
+      function criarCoracao() {
+      const coracao = document.createElement("div");
+      coracao.className = "coracao";
+      coracao.textContent = "❤️";
+      coracao.style.left = Math.random() * window.innerWidth + "px";
+      coracao.style.top = "500px";
+      document.body.appendChild(coracao);
+
+      setTimeout(() => {
+        coracao.remove();
+      }, 2000);
+    }
+  </script>
+
+
+</body>
+</html>
